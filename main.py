@@ -43,27 +43,21 @@ try:
             }
             # Create file
             file = drive.CreateFile(metadata=metadata)
-            # permission = file.GetPermissions('1VWKbAHt8MM1vQX-9xCt5xUERdVmh3mK5')
-            # print(permission)
+
             file.Upload()
+            # Тут пока что проверка что все работает в поле value почты соответсвенно
             permission = file.InsertPermission({
                 'type': 'user',
-                'value': 'mixan9000@gmail.com',
+                'value': '////EMAIL/////',
                 'role': 'reader'})
             print('.', end='')
     else:
         print('Incorrect path')
-    # file1 = drive.CreateFile({'id':'Hello.txt'})
-    # Fetch permissions.
-    # permissions = file1.GetPermissions()
-    # print(permissions)
+
 
 except Exception as e:
     print('Wrong ID of Google Drive!', traceback.print_exc())
 
-
-# /Users/xxrose/PycharmProjects/toggl/firstCourse.xlsx
-# 176ZDkmDvQ-KY8Zcx7nBcWLdR22_F0Kg_
 
 
 
